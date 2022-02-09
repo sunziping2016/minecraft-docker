@@ -4,7 +4,9 @@ services:
   mc:
     image: ${IMAGE:-itzg/minecraft-server}
     ports:
-      - 25565:25565
+      - 25565:25565  # Java server
+      - 24454:24454  # Voice
+      - 19132:19132  # Bedrock server
     environment:
       EULA: "true"
       TYPE: FABRIC
