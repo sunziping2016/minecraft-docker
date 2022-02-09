@@ -4,10 +4,10 @@ services:
   mc:
     image: ${IMAGE:-itzg/minecraft-server}
     ports:
-      - 25565:25565  # Java server
-      - 24454:24454  # Voice
-      - 19132:19132  # Bedrock server
-      - 63830:63830  # Dynmap
+      - 0.0.0.0:25565:25565      # Java server
+      - 0.0.0.0:24454:24454/udp  # Voice
+      - 0.0.0.0:19132:19132/udp  # Bedrock server
+      - 127.0.0.1:63830:63830    # Dynmap
     environment:
       EULA: "true"
       TYPE: FABRIC
