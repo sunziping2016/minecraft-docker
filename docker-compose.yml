@@ -7,6 +7,7 @@ services:
       - 25565:25565  # Java server
       - 24454:24454  # Voice
       - 19132:19132  # Bedrock server
+      - 63830:63830  # Dynmap
     environment:
       EULA: "true"
       TYPE: FABRIC
